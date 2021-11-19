@@ -10,7 +10,7 @@ import {
 } from "eth-hooks";
 import { useExchangeEthPrice } from "eth-hooks/dapps/dex";
 import React, { useCallback, useEffect, useState } from "react";
-import { BrowserRouter, Link, Route, Switch } from "react-router-dom";
+import { HashRouter, Link, Route, Switch } from "react-router-dom";
 import "./App.css";
 import {
   Account,
@@ -244,7 +244,7 @@ function App(props) {
         selectedChainId={selectedChainId}
         targetNetwork={targetNetwork}
       />
-      <BrowserRouter>
+      <HashRouter>
         <Menu style={{ textAlign: "center" }} selectedKeys={[route]} mode="horizontal">
           <Menu.Item key="/">
             <Link
@@ -383,7 +383,7 @@ function App(props) {
             />
           </Route>
         </Switch>
-      </BrowserRouter>
+      </HashRouter>
 
       <ThemeSwitch />
 
